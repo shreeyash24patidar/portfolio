@@ -72,3 +72,17 @@ $(document).ready(function(){
         }
     });
 });
+function sendEmail()
+{
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "portfolioshreeyash@gmail.com",
+        Password : "Shreeyash@123",
+        To : 'portfolioshreeyash@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact form Query",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+}
